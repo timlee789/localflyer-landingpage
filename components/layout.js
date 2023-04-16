@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useSession, signOut } from 'next-auth/react';
 import  Cookie  from 'js-cookie';
 import Header from './Header';
+import Footer from './Footer'
 
 
 function Layout({ title, children }) {
@@ -148,8 +149,8 @@ function Layout({ title, children }) {
           </nav>
         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
-        <footer className="flex h-10 justify-center items-center shadow-inner lg: h-50">
-          Copyright @2023 Localflyer.online
+        <footer >
+          <Footer />
         </footer>
       </div>
     </div>
