@@ -34,7 +34,7 @@ function StoreScreen({ user, product}) {
 if(!isLoaded) return <div>Loading...</div>
   return (
     <Layout>
-      <div className='mobile:bg-white laptop:bg-white'>
+      <div className='mobile:bg-white laptop:bg-white mt-12'>
         {user.map((heads) => (
           <HeadBanner key={heads._id} banner={heads.banner} />
         ))}

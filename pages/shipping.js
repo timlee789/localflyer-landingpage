@@ -64,6 +64,7 @@ export default function ShippingScreen() {
     }
   return (
     <Layout title="Signin As Guest">
+      <div className='mt-12'>
         <CheckoutWizard activeStep={1}/>
         <form className='max=auto max-w-screen-md' onSubmit={handleSubmit(submitHandler)}>
             <h1 className='mb-4 text-xl text-black'>Signin As Guest</h1>
@@ -131,6 +132,7 @@ export default function ShippingScreen() {
                 </div>
 
         </form>
+        </div>
     </Layout>
   )
 }

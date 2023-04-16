@@ -67,6 +67,7 @@ export default function PlaceOrderScreen() {
 
   return (
     <Layout title="Place Order">
+       <div className='mt-12'>
       <CheckoutWizard activeStep={3} />
       <h1 className="mb-4 text-xl">Place Order</h1>
       {cartItems.length === 0 ? (
@@ -184,6 +185,7 @@ export default function PlaceOrderScreen() {
           </div>
         </div>
       )}
+      </div>
     </Layout>
   );
 }

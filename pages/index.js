@@ -16,12 +16,12 @@ export default function Home({storeinfo}) {
 
       {session?.user?.email? (
         // <div>{session.user._id}
-        <div>
+        <div className='mt-12'>
           <Productpage />
         </div>
         //</div>
       ) :  (
-        <div className="flex justify-center card ">
+        <div className="flex justify-center card mt-12">
         <HomePage />
         <div className="grid grid-cols-2 gap-4 mt-10 md:grid-cols-3 lg:grid-cols-5 ml-7 ">
         {storeinfo.map((sto) => (

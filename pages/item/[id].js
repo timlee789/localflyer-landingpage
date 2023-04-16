@@ -30,7 +30,7 @@ function StoreScreen({ product}) {
  console.log(product)
   return (
     <Layout>
-       <div className="py-2 pl-5">
+       <div className="py-2 pl-5 pt-4">
         <Link href={`/store/${product.user}`}>back to products</Link>
       </div>
       <div  className="mobile:grid grid-cols-1 p-2 gap-2 laptop:grid-cols-3 p-2 gap-2 ml-auto mr-auto">  

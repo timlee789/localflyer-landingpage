@@ -8,6 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSession, signOut } from 'next-auth/react';
 import  Cookie  from 'js-cookie';
+import Header from './Header';
 
 
 function Layout({ title, children }) {
@@ -48,23 +49,25 @@ function Layout({ title, children }) {
       </Head>
       <ToastContainer position="bottom-center" limit={1} autoClose={2000} />
 
-      <div className="flex min-h-screen flex-col justify-between bg-white">
+      {/* <div className="flex min-h-screen flex-col justify-between bg-white"> */}
+      <div className="w-full h-20 border-b-[1px] border-b-black font-titleFont sticky top-0 bg-white z-50 px-4 pt-4">
         <header>
-          <nav className="flex h-12 items-center px-4 justify-between shadow-md ">
+          <nav v className="max-w-7xl h-full mx-auto flex justify-between items-center">
 
              {session?.user?.isAdmin? ( 
               <Link href="/">
               <div className="text-sm font-bold">{session.user.name}</div>
               </Link>
             ) : sellername? (
-              <div className='flex flex-col-2 justify-stretch'>
+              <div className='flex w-full'>
                    <div>
                       <Link href={`/store/${seller}`}>
-                      <div className="text-xs font-bold ">{sellername}</div>
+                      <div className="text-xs font-bold pt-4">{sellername}</div>
                       </Link>
                     </div>
+                    <Header />
                     <div>
-                      <Link href="/cart" className="flex font-bold  ">
+                      <Link href="/cart" className="flex font-bold pt-5 pr-4  ">
                        <div className='justify-items:end'> Cart</div>
                         {cartItemsCount > 0 && (
                           <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
@@ -75,11 +78,12 @@ function Layout({ title, children }) {
                     </div>
               </div>
             ) : (
-              <div className=''>
-                      <Link href="/">
-                        <div className='text-sm font-bold'>Localflyer.online</div>
-                      </Link>
-              </div>
+              // <div className=''>
+              //         <Link href="/">
+              //           <div className='text-sm font-bold'>Localflyer.online</div>
+              //         </Link>
+              // </div>
+              <Header />
             )
            }                      
            <div >
@@ -90,14 +94,7 @@ function Layout({ title, children }) {
                   Menu
                  </Menu.Button>
                  <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white  shadow-lg ">
-                    {/* <Menu.Item>
-                    <DropdownLink
-                       className="dropdown-link"
-                       href="/admin/dashboard"
-                     >
-                       Dashboard
-                     </DropdownLink>
-                   </Menu.Item> */}
+                 
                     <Menu.Item>
                     <DropdownLink
                        className="dropdown-link"
@@ -123,38 +120,7 @@ function Layout({ title, children }) {
                        Product Edit
                      </DropdownLink>
                    </Menu.Item>
-                   {/* <Menu.Item>
-                     <DropdownLink
-                       className="dropdown-link"
-                       href="/admin/users"
-                     >
-                       Users
-                     </DropdownLink>
-                   </Menu.Item> */}
-                   {/* <Menu.Item>
-                     <DropdownLink
-                       className="dropdown-link"
-                       href="/admin/campaign/campaignhistory"
-                     >
-                       Campaign History
-                     </DropdownLink>
-                   </Menu.Item> */}
-                   {/* <Menu.Item>
-                     <DropdownLink
-                       className="dropdown-link"
-                       href="/admin/campaign/campaigninput"
-                     >
-                       Campaign Input
-                     </DropdownLink>
-                   </Menu.Item> */}
-                   {/* <Menu.Item>
-                     <DropdownLink
-                       className="dropdown-link"
-                       href="/contest/gallery"
-                     >
-                       Event Gallery
-                     </DropdownLink>
-                   </Menu.Item> */}
+               
                    <Menu.Item>
                      <div
                        className="dropdown-link text-blue-500 font-bold"
@@ -174,7 +140,7 @@ function Layout({ title, children }) {
               ) : (
                 <div>
                 <Link href="/login">
-                  <div className="font-bold text-blue-400 ml-8">Login</div>
+                  <div className="font-bold text-blue-400 mr-4 pt-4">Login</div>
                 </Link>
                 </div>   
               )}

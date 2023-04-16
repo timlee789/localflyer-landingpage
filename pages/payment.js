@@ -40,6 +40,7 @@ export default function PaymentScreen() {
 
   return (
     <Layout title="Payment Method">
+       <div className='mt-12'>
       <CheckoutWizard activeStep={2} />
       <form className="mx-auto max-w-screen-md" onSubmit={submitHandler}>
         <h1 className="mb-4 text-xl">Payment Method</h1>
@@ -70,6 +71,7 @@ export default function PaymentScreen() {
           <button className="primary-button">Next</button>
         </div>
       </form>
+      </div>
     </Layout>
   );
 }
