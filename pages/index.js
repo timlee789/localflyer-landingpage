@@ -22,7 +22,7 @@ export default function Home({storeinfo}) {
         //</div>
       ) :  (
         <div className="flex justify-center card mt-12">
-        <HomePage />
+        {/* <HomePage /> */}
         <div className="grid grid-cols-2 gap-4 mt-10 md:grid-cols-3 lg:grid-cols-5 ml-7 ">
         {storeinfo.map((sto) => (
           <StoreInfo
