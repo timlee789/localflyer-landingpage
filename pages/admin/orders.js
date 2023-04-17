@@ -39,7 +39,7 @@ export default function AdminOrderScreen() {
 
   return (
     <Layout title="Admin Dashboard">
-      <div className="grid md:grid-cols-4 md:gap-5 bg-white">
+      <div className="grid md:grid-cols-4 md:gap-5 bg-white my-16">
         {/* <div>
           <ul>
             <li>

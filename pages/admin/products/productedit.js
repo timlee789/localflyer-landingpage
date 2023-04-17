@@ -66,9 +66,7 @@ export default function Productedit() {
   
   return (
     <Layout>
-    <div>
-    
-
+    <div className='my-12'>
       <h1 className="mb-4 text-lg">Product List</h1>
       {loading ? (
         <div>Loading...</div>

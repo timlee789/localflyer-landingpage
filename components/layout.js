@@ -56,9 +56,13 @@ function Layout({ title, children }) {
           <nav v className="max-w-7xl h-full mx-auto flex justify-between items-center">
 
              {session?.user?.isAdmin? ( 
+              <div className='flex'>
               <Link href="/">
               <div className="text-sm font-bold">{session.user.name}</div>
               </Link>
+              <Header />
+              </div>
+              
             ) : sellername? (
               <div className='flex w-full'>
                    <div>

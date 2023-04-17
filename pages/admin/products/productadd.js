@@ -105,6 +105,7 @@ export default function AdminProductScreen() {
   };
   return (
     <Layout title="Order History">
+      <div className='my-12'>
       <h1 className="mb-4 text-xl text-black">Product Registration</h1>
 
       <form
@@ -232,7 +233,7 @@ export default function AdminProductScreen() {
         </div>
       </form>
 
-   
+      </div>
     </Layout>
   );
 }

@@ -139,7 +139,7 @@ export default function AdminProductEditScreen() {
 
   return (
     <Layout title={`Edit Product ${productId}`}>
-      <div className="grid md:grid-cols-4 md:gap-5">
+      <div className="grid md:grid-cols-4 md:gap-5 my-12">
         <div className="md:col-span-3">
           {loading ? (
             <div>Loading...</div>
@@ -284,7 +284,7 @@ export default function AdminProductEditScreen() {
                 </button>
               </div>
               <div className="mb-4">
-                <Link href={`/admin/productinput`}>Back</Link>
+                <Link href={`/admin/products/productadd`}>Back</Link>
               </div>
             </form>
           )}
