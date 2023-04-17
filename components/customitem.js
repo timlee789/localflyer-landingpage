@@ -31,7 +31,7 @@ if(!isLoaded) return <div>Loading...</div>
       <Link href={`/item/${props._id}`}>
       <div className="flex justify-center card">     
        
-        <div className='mobile:h-64 laptop:h-128'>
+        <div className='mobile:h-64 laptop:h-96'>
           <Image
             src={props.image}
             alt="banner"
